@@ -1,0 +1,112 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: radial-gradient(
+        circle,
+        rgb(195, 221, 229) 0%,
+        rgb(47, 93, 97) 100%
+    );
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.headerContainer{
+    font-family: 'Cascadia Code', monospace;
+    font-size: 40px;
+    color: rgb(230, 240, 240);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.calContainer {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 450px;
+    border: 5px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 15px 30px rgba(0, 0, 0, 0.5),
+        0 5px 10px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    background: linear-gradient(145deg, rgb(60, 60, 60), rgb(30, 30, 30));
+}
+
+.display {
+    display: flex;
+    background-color: rgb(212, 212, 212);
+    height: 100px;
+    font-family: 'Cascadia Code', monospace;
+    font-size: 40px;
+    justify-content: right;
+    align-items: center;
+    border: 1px solid black;
+    padding-right: 10px;
+    box-shadow:
+        inset 0 3px 8px rgba(0, 0, 0, 0.5),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.calGridContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    width: 400px;
+    height: 350px;
+    box-sizing: border-box;
+}
+
+.specOpButton{
+    font-family: 'Cascadia Code', monospace;
+    font-size: 20px;
+    background: linear-gradient(145deg, rgb(180, 180, 180), rgb(140, 140, 140));
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.operatorButton{
+    font-family: 'Cascadia Code', monospace;
+    font-size: 20px;
+    background: linear-gradient(145deg, rgb(255, 195, 60), rgb(230, 155, 0));
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.button{
+    font-family: 'Cascadia Code', monospace;
+    font-size: 20px;
+    background: linear-gradient(145deg, rgb(90, 90, 90), rgb(55, 55, 55));
+    color: rgb(230, 230, 230);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 6px;
+    box-shadow:
+        0 4px 6px rgba(0, 0, 0, 0.4),
+        inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+}
+
+.specOpButton:active,
+.operatorButton:active,
+.button:active {
+    transform: translateY(2px);
+    box-shadow:
+        0 1px 2px rgba(0, 0, 0, 0.4),
+        inset 0 1px 2px rgba(0, 0, 0, 0.3);
+}
